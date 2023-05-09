@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-i = 0
-while (i <= 98):
-    i += 1
-    print("{} = {}".format(i, hex(i)))
+for j in range(0,99)
+    print("{} = {}".format(j, hex(j)))
