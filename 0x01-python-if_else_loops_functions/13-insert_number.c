@@ -2,7 +2,7 @@
 
 /**
 *insert_node - inserts a number into a sorted singly linked list
-*@head: pointer
+*@head: pointer to the first element
 *
 *@number: a number to be inserted
 *
