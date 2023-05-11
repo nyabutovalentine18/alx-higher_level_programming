@@ -4,4 +4,4 @@ if __name__ == "__main__":
     number = int(len(sys.argv))
     total = 0
     for j in range(1, number):
-        print("{} + {} = {}".format(number, total, number + total))
+        print("{} + {} = {}".format(number, total, number[j] + total))
