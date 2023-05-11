@@ -2,8 +2,8 @@
 if __name__ == "__main__":
     import sys
     number = len(sys.argv)
-    if number == 0:
-        print("0 arguments.")
+    if number == 1:
+        print("{}".format(number - 1),"arguments.")
     elif number == 2:
         print("{}".format(number - 1), "argument:")
     else:
