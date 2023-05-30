@@ -1,18 +1,22 @@
 #!/usr/bin/python3
-"""This module defines a Square class
-The size attribute is only positive numbers"""
+"""This module defines a Square class"""
 
 
 class Square:
     """The class defines a square and checks the size attribute"""
 
     def __inti__(self, __size=0):
-        """ this function instantiate only positive integers"""
+        """__init__
+        the __init__  function instantiate only positive integers
+        Attributes:        
+        Size(:obj:`int`, optional): The size of the square
+        Raises:
+        TypeError and ValueError"""
 
-        if not isinstance(__size, int):
+        if type(size) is not int:
             raise TypeError("size must be an integer")
 
-        if __size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
 
         self.__size = size
