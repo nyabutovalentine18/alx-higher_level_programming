@@ -5,10 +5,10 @@
 class Square:
     """The class defines a square and checks the size attribute"""
 
-    def __inti__(self, __size=0):
+    def __inti__(self, size=0):
         """__init__
         the __init__  function instantiate only positive integers
-        Attributes:        
+        Attributes:
         Size(:obj:`int`, optional): The size of the square
         Raises:
         TypeError and ValueError"""
