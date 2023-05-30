@@ -61,6 +61,8 @@ class Square:
     def my_print(self):
         """ Prints in stdout"""
 
+        position, tuplet = self.__position
+        size = self.__size
         if size == 0:
             print("")
         else:
