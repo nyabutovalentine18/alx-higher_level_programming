@@ -62,7 +62,7 @@ class Square:
 
     def area(self):
         """ This will give us the area of a square"""
-        return self.__size * self.__size
+        return self.__size ** 2
 
     def my_print(self):
         """ Prints in stdout"""
@@ -75,8 +75,24 @@ class Square:
             d = self.position[1]
             for j in range(d):
                 print()
-            for k in range(self.size - 1):
+            for k in range(self.size):
                 for m in range(i):
+                    if m < s:
+                        print("{}".format(" "), end="")
+                    else:
+                        print("{}".format("#"), end="")
+                print()
+    def __str__(self):
+        if self.__size == 0:
+            return ''
+        else:
+            i = self.position[0] + self.size
+            s = self.position[0]
+            d = self.position[1]
+            for j in range(d):
+                print()
+            for k in range(self.size - 1):
+                for m in range(l):
                     if m < s:
                         print("{}".format(" "), end="")
                     else:
