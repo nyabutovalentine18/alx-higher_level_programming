@@ -1,17 +1,20 @@
 #!/usr/bin/python3
-"""This module defines a Square class"""
+"""
+A Square Class
+"""
 
 
 class Square:
-    """The class defines a square and checks the size attribute"""
-
-    def __inti__(self, size=0):
+    """ represents a square """
+    def __init__(self, size=0):
         """__init__
-        the __init__  function instantiate only positive integers
+        The __init__ method initializes the size of the square.
         Attributes:
-        Size(:obj:`int`, optional): The size of the square
+            size (:obj:`int`, optional): The size of the square.
         Raises:
-        TypeError and ValueError"""
+            TypeError: If `size` type is not `int`.
+            ValueError: If `size` is less than `0`.
+        """
 
         if type(size) is not int:
             raise TypeError("size must be an integer")
