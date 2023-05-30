@@ -85,7 +85,7 @@ class Square:
 
     def __str__(self):
         if self.__size == 0:
-            return ''
+            return ""
         else:
             i = self.position[0] + self.size
             s = self.position[0]
@@ -93,10 +93,10 @@ class Square:
             for j in range(d):
                 print()
             for k in range(self.size - 1):
-                for m in range(l):
+                for m in range(i):
                     if m < s:
                         print("{}".format(" "), end="")
                     else:
                         print("{}".format("#"), end="")
                 print()
-            return ' ' * self.position[0] + '#' * self.size
+            return ' ' * self.position[0] + '#' * self.size 
