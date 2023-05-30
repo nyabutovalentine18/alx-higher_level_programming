@@ -82,6 +82,7 @@ class Square:
                     else:
                         print("{}".format("#"), end="")
                 print()
+
     def __str__(self):
         if self.__size == 0:
             return ''
