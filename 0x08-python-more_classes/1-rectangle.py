@@ -21,9 +21,8 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
-        else:    
+        else:
             self.__width = width
-
 
         if type(height) != int:
             raise TypeError("height must be an integer")
@@ -36,8 +35,8 @@ class Rectangle:
     def width(self):
         """
         Returns the width of the Rectangle
-        """ 
-        
+        """
+
         return self.__width
 
     @width.setter
