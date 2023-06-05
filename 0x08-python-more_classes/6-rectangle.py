@@ -9,6 +9,24 @@ class Rectangle:
     An empty Rectangle class
     """
 
+    number_of_instances = 0
+
+    @staticmethod
+    def increment():
+        """
+        Increments the instances
+        """
+        
+        Rectangle.number_of_instances += 1
+
+    @staticmethod
+    def decrement():
+        """
+        Decrements the instances
+        """
+
+        Rectangle.number_of_instances -= 1
+
     def __init__(self, width=0, height=0):
         """
         Initializes some values
@@ -30,6 +48,8 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+
+        self.increment()
 
     @property
     def width(self):
