@@ -1,40 +1,39 @@
 #include "lists.h"
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
 /**
-*insert_node - inserts a number into a sorted singly linked list
-*@head: pointer to the first element
-*
-*@number: a number to be inserted
-*
-*Return: the address of the new node, or NULL if it failed
-*/
-
+ * insert_node- Inserts a number into a sorted singly linked list.
+ * @head: Head pointer
+ * @number: integer
+ * Return: nth node.
+ */
 listint_t *insert_node(listint_t **head, int number)
 {
+	listint_t *new_node, *prev, *actual = *head;
 
-listint_t *ptr, *pp;
-ptr = *head;
-ptr = malloc(sizeof(listint_t));
-if (ptr == NULL)
-{
-return (NULL);
+	if (head == NULL)
+		return (NULL);
+
+	new_node = malloc(sizeof(listint_t)); /* allocate node */
+	if (new_node == NULL)
+		return (NULL);
+
+	new_node->n = number; /* put in the data  */
+	new_node->next = NULL;
+
+	if (actual == NULL || actual->n > number) /* no head and at beginning */
+	{	new_node->next = actual;
+		*head = new_node;
+		return (new_node);
+	}
+
+	while (actual && number > actual->n) /* Traverse till pos or last node */
+	{	prev = actual;
+		actual = actual->next;
+	}
+
+	prev->next = new_node; /* Change the next of prev node */
+	new_node->next = actual;  /* point new to after */
+	return (new_node);
 }
-pp = *head;
-pp->n = number;
-
-if (pp == NULL || number <= pp->n)
-{
-ptr->next = pp;
-*head = ptr;
-return (ptr);
-}
-while (pp && pp->next && pp->next->n < number)
-pp = pp->next;
-ptr->next = pp->next;
-pp->next = ptr;
-return (ptr);
-}
-
-
-
-
