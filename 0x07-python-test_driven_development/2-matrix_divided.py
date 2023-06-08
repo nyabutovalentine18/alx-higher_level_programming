@@ -16,13 +16,13 @@ def matrix_divided(matrix, div):
 
     """
 
-
     new_matrix = []
     for row in range(len(matrix)):
         new_matrix.append([])
         for elements in matrix[row]:
             new_matrix[row].append(round((elements / div), 2))
     return new_matrix
+
 
 if __name__ == "__main__":
     import doctest
