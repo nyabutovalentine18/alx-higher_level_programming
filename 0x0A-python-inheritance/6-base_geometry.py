@@ -14,4 +14,4 @@ class BaseGeometry(object):
         defined area method
         Args: None
         """
-        raise Exception("area() is not implemented") 
+        raise Exception("area() is not implemented")
