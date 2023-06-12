@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-defined BaseGeometry
+define  module
 """
 
 
@@ -8,11 +8,19 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """create class"""
+    """create class and inheritance BaseGeometry"""
+
     def __init__(self, width, height):
+        """
+         instances
+            Args:
+                width
+                height
+        """
+
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-        self.__widht = width
+        self.__width = width
         self.__height = height
 
     def area(self):
