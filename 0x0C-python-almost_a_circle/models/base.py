@@ -60,12 +60,12 @@ class Base:
     def load_from_file(cls):
         """Returns a list of instances of type caller class from a file"""
         filename = cls.__name__ + ".json"
-        l = []
+        k = []
         try:
             with open(filename, 'r') as f:
-                l = cls.from_json_string(f.read())
-            for i, e in enumerate(l):
-                l[i] = cls.create(**l[i])
-        except:
+                k = cls.from_json_string(f.read())
+            for i, e in enumerate(k):
+                k[i] = cls.create(**k[i])
+        except in exception:
             pass
-        return l
+        return k
