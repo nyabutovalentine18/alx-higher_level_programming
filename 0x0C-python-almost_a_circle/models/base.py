@@ -114,3 +114,7 @@ class Base:
                 return inslist
         except IOError:
             return []
+
+    def draw(list_rectangles, list_squares):
+        """draws all rectangles and squares"""
+        
