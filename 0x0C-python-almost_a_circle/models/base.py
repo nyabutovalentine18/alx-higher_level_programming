@@ -49,9 +49,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all the attributes already set"""
-        if cls.__name__ is 'Rectangle':
+        if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
-        elif cls.__name__ is 'Square':
+        elif cls.__name__ == 'Square':
             dummy = cls(1)
         dummy.update(**dictionary)
         return (dummy)
@@ -66,6 +66,6 @@ class Base:
                 k = cls.from_json_string(f.read())
             for i, e in enumerate(k):
                 k[i] = cls.create(**k[i])
-        except:
+        except :
             pass
         return k
