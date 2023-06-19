@@ -66,6 +66,6 @@ class Base:
                 k = cls.from_json_string(f.read())
             for i, e in enumerate(k):
                 k[i] = cls.create(**k[i])
-        except in exception:
+        except:
             pass
         return k
