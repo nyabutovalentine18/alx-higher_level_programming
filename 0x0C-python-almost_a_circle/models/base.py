@@ -49,7 +49,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all the attributes already set"""
-        if dictionary and dictionary != {}:        
+        if dictionary and dictionary != {}:
             if cls.__name__ == 'Rectangle':
                 new = cls(1, 1)
             else:
