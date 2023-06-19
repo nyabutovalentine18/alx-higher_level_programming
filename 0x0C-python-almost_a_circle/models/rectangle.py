@@ -7,25 +7,6 @@ defined base class module
 from models.base import Base
 
 
-class Base:
-    """
-    class base
-    """
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        """
-        class constructor
-        Args:
-            id = None
-        """
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
-
-
 """
 defined class Rectangle that inherits from base
 """
